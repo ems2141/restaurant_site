@@ -40,13 +40,11 @@ describe "Landing page" do
   end
 
   it "displays a contact us email link in the footer" do
-
     mailto_link = page.find('html body footer a[href^=mailto]')
     mailto_link.text.wont_equal ''
   end
 
   it "displays the copyright in the footer" do
-    skip
     footer = page.find('html body footer')
     footer.text.must_match /©/
     footer.text.must_include "2013"
